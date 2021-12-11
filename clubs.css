@@ -1,0 +1,87 @@
+body{
+    background-image: url("bgrnd.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    
+}
+.btn{
+    background-color: #427285;
+    color: white;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.jumbotron {
+    background-image: url('movecb.png');
+    width: 100%;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #427285;
+    border-color: #427285;
+}
+
+.btn-secondary {
+    
+    border-color: #427285;
+    color: white;
+}
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+    margin-top: 5px;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.jumbotron {
+    background-image: url('movecb.png');
+   
+    color: white;
+}
+
+.btn-primary {
+    background-color: #427285;
+    border-color: #427285;
+}
+
+.btn-secondary {
+    
+    border-color: #427285;
+    color: white;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+    margin-top: 5px;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+
+.display-3{
+    color: white;
+}
