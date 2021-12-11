@@ -38,19 +38,19 @@
                 <br>
                
                 <div class="form-field">
-                    <h1><a href="Admindashboard.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
+                    <h1><a href="Admindashboard.php" class="btn btn-primary btn-lg" id= "Homepagebtn"  role="button">Home page</a></h1>
                 </div>
             </div>
 
 
             <!-- form content-->
-            <form class="form-right" action="createclass.php" method="post" name="myForm" onsubmit="return(validate());">
-                <h2 class="text-uppercase" style="color: black;">Login</h2>
+            <form class="form-right" action="createstudentclasses.php" method="post" name="myForm" onsubmit="return(validate());">
+                <h2 class="text-uppercase" style="color: black;">Add</h2>
 
                 <!-- Class_id course_id-->
                 
         
-                <div class="mb-3"> <label>Coursename</label> <input type="text" name="Coursename" id="Coursename" class="input-field"> </div>
+                <div class="mb-3"> <label>Student Id</label> <input type="text" name="student_id" id="student_id" class="input-field"> </div>
 
                
 

@@ -15,56 +15,67 @@
 </head>
 
 
-<body>
+<body style="background-image: url('bgrnd.jfif');  background-size: 100%; background-repeat: no-repeat; ">
     <br>
     <br>
     <br>
     <br>
     <br>
     
-    <div class="containerr" style="background-size: 100%;">
+    <div class="containerr"  >
+    
         <div class="wrapper">
            
 
             <!-- left side of the form-->
             <div class="form-left">
-                <h2 class="text-uppercase">Welcome Admin!!</h2>
-                <p><h5>Kindly enter your new classes name</h5></p>
-                <br>
-                <br>
-                <br>
-                
+                <h2 class="text-uppercase">Welcome ADMIN!!</h2>
+                <p><h5>Kindly enter your new students details </h5></p>
                 <br>
                 <br>
                
                 <div class="form-field">
-                    <h1><a href="Admindashboard.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
+                    <h1><a href="Admindashboard.php" class="btn btn-primary btn-lg" id= "Homepagebtn"  role="button">Home page</a></h1>
                 </div>
+               
+                
             </div>
 
 
             <!-- form content-->
-            <form class="form-right" action="createclass.php" method="post" name="myForm" onsubmit="return(validate());">
+            <form class="form-right" action="create.php" method="post" name="myForm" onsubmit="return(validate());">
                 <h2 class="text-uppercase" style="color: black;">Login</h2>
 
-                <!-- Class_id course_id-->
-                
-        
-                <div class="mb-3"> <label>Coursename</label> <input type="text" name="Coursename" id="Coursename" class="input-field"> </div>
+                <!-- first name and last name-->
+                <div class="row">
+                    <div class="col-sm-6 mb-3"> <label>First Name</label> <input type="text" name="fname" id="fname" class="input-field"> </div>
+                    <div class="col-sm-6 mb-3"> <label>Last Name</label> <input type="text" name="lname" id="lname" class="input-field"> </div>
+                </div>
 
-               
+                <div class="mb-3"> <label>Your Email</label> <input type="email" class="input-field" name="email" id="email"> </div>
+
+
+                <!-- Number-->
+                <div class="mb-3"> <label>Your number </label> <input type="text" class="input-field" name="number" id="number"> </div>
+
+                <!-- Role-->
+                
+                 <!-- Password-->
+                <div class="row">
+                    <div class="col-sm-6 mb-3"> <label>Password</label> <input type="password" name="Pword" id="Pword" class="input-field"> </div>
+                </div>
 
                     <!-- Register button-->
-                    <div class="form-field"> <input type="submit" value="Register" class="Login" name="Register"> </div>
+                     <input type="submit" value="Register" class="Login" name="Register"> </div>
             </form>
             </div>
         </div>
         <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        
 
+
+   
         <!-- footer  -->
         <footer class="page-footer">
             <div class="container">

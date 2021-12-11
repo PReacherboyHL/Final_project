@@ -35,7 +35,7 @@
                         <h2 class="pull-left" style= "color: black;">Student Classes </h2>
                         
                         
-                        <form class=" pull-right" action="addstudentclasses.html" method="post" >
+                        <form class=" pull-right" action="addstudentclasses.php" method="post" >
     
     <button  class="btn btn-outline-success my-2 my-sm-0" type="submit" style= "padding: 12px;  background: #427285;
         border-top-left-radius: 5px;

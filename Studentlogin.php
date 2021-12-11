@@ -1,3 +1,31 @@
+<?php
+session_start();
+ ob_start();
+    include 'dbconn.php'; // Using database connection file here
+    ob_end_clean();
+    $error=" ";
+if(isset($_POST['Login']))//Check when the login button is clicked
+{   
+    $id = $_POST['Student_id'];
+    $Pword = $_POST['Pword'];
+
+    $check = mysqli_query($link,"SELECT * from `student` WHERE (`Student_id`='$id' AND `Pword`='$Pword') ");
+    if(mysqli_num_rows($check)==1){
+
+   
+    //Store variables in session
+    $_SESSION['Student_id']= $id;
+    header("location:Studentdashboard.php"); // redirects to members view page
+    exit;  
+}
+else{
+    $error= "Invalid login details";
+}
+
+}
+mysqli_close($link); // Close connection
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,8 +56,8 @@
 
             <!-- left side of the form-->
             <div class="form-left">
-                <h2 class="text-uppercase">Welcome Admin!!</h2>
-                <p><h5>Kindly enter your new classes name</h5></p>
+                <h2 class="text-uppercase">Welcome Student!!</h2>
+                <p><h5>Kindly Login</h5></p>
                 <br>
                 <br>
                 <br>
@@ -38,24 +66,24 @@
                 <br>
                
                 <div class="form-field">
-                    <h1><a href="Admindashboard.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
+                    <h1><a href="index.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
                 </div>
             </div>
 
 
             <!-- form content-->
-            <form class="form-right" action="createclass.php" method="post" name="myForm" onsubmit="return(validate());">
+            <form class="form-right" action="Studentlogin.php" method="post" name="myForm" onsubmit="return(validate());">
                 <h2 class="text-uppercase" style="color: black;">Login</h2>
 
                 <!-- Class_id course_id-->
                 
         
-                <div class="mb-3"> <label>Coursename</label> <input type="text" name="Coursename" id="Coursename" class="input-field"> </div>
+                <div class="mb-3"> <label>Student ID</label> <input type="text" name="Student_id" id="Student_id" class="input-field"> </div>
 
-               
+                <div class="mb-3"> <label>Password</label> <input type="Password" name="Pword" id="Pword" class="input-field"> </div>
 
                     <!-- Register button-->
-                    <div class="form-field"> <input type="submit" value="Register" class="Login" name="Register"> </div>
+                    <div class="form-field"> <input type="submit" value="Login" class="Login" name="Login"> </div>
             </form>
             </div>
         </div>

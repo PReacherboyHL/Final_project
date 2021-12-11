@@ -26,14 +26,14 @@ function validate() {
 
     let numberTest = document.myForm.number.value.search(/[0-9]/g)
     if (document.myForm.number.value == "" || numberTest == -1) {
-        alert("Last name can only be letters");
+        alert("Enter only numbers for telephone number");
         document.myForm.number.focus();
         return false;
     }
     
     let groups_idTest = document.myForm.groups_id.value.search(/[0-9]/g)
     if (document.myForm.groups_id.value == "" || groups_idTest == -1) {
-    alert("Last name can only be letters");
+    alert("Id can only be numbers");
     document.myForm.groups_id.focus();
     return false;
     }
@@ -46,17 +46,22 @@ if (document.myForm.Classid.value == "" || ClassidTest == -1) {
 }
 
 
-let CoursenameTest = document.myForm.Coursename.value.search(/[a-zA-Z]/g)
-if (document.myForm.Coursename.value == "" || CoursenameTest == -1) {
-    alert("Last name can only be letters");
-    document.myForm.Coursename.focus();
-    return false;
+// let CoursenameTest = document.myForm.Coursename.value.search(/[a-zA-Z]/g)
+// if (document.myForm.Coursename.value == "" || CoursenameTest == -1) {
+//     alert("Last name can only be letters");
+//     document.myForm.Coursename.focus();
+//     return false;
 }
 
-let student_idTest = document.myForm.student_id.value.search(/[a-zA-Z]/g)
-if (document.myForm.student_id.value == "" || student_idTest == -1) {
-    alert("Last name can only be letters");
+// let student_idTest = document.myForm.student_id.value.search(/[0-9]/g)
+// if (document.myForm.student_id.value == "" || student_idTest == -1) {
+//     alert("only numbers");
+//     document.myForm.student_id.focus();
+//     return false;
+// }
+
+if (document.myForm.student_id.value == "" || document.myForm.student_id.value.search(/^[0-9]+$/)) {
+    alert("Id can only be numbers");
     document.myForm.student_id.focus();
     return false;
-}
 }

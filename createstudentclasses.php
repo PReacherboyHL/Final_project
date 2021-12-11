@@ -42,7 +42,7 @@ $check_login = mysqli_query(
 if (mysqli_num_rows($check_login) > 0) {
     echo "<script LANGUAGE='JavaScript'>
     window.alert('This class already exists');
-    window.location.href='addperson.html';
+    window.location.href='addStudent.php';
     </script>";
 } else {
     $sql = "INSERT INTO studentclasses (student_id) Values('$student_id')";

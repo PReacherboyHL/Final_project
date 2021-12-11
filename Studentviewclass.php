@@ -32,65 +32,47 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left" style= "color: black;">Registered Students</h2>
+                        <h2 class="pull-left" style= "color: black;">Student Classes </h2>
                         
                         
-
-                        <form class=" pull-right" action="addperson.php" method="post"  >
-    
-                            <button  class="btn btn-outline-success my-2 my-sm-0" type="submit" style= "padding: 12px;  background: #427285;
-                                border-top-left-radius: 5px;
-                                    border-bottom-right-radius: 5px;
-                                    width: 130px;
-                                    border: none;
-                                    margin: 6px 0 50px 0px;
-                                    cursor: pointer;
-                                    color: #fff;
-                                    font-weight: 700;
-                                     font-size: 15px;" >Add new student</button>
-                         </form>
-</nav>
+                        
                     </div>
                     <?php
                     // Include config file
                     require_once 'dbconn.php';
 
                     // Attempt select query execution
-                    $sql = 'SELECT * FROM student';
+                    $sql = 'SELECT * FROM studentclasses';
                     if ($result = mysqli_query($link, $sql)) {
                         if (mysqli_num_rows($result) > 0) {
                             echo '<table class="table table-bordered table-striped">';
                             echo '<thead>';
                             echo '<tr>';
-                            echo '<th>Student_id</th>';
-                            echo '<th>Fname</th>';
-                            echo '<th>Lname</th>';
-                            echo '<th>email</th>';
-                            echo '<th>tel</th>';
-                            echo '<th>Pword</th>';
+                            echo '<th>student_id</th>';
+                            echo '<th>class_id1</th>';
+                            echo '<th>class_id2</th>';
+                            echo '<th>class_id3</th>';
+                            echo '<th>class_id4</th>';
+                            echo '<td>';
+
+                                
+                            echo '</td>';
+                            echo '</tr>';
             
                             echo '</tr>';
                             echo '</thead>';
                             echo '<tbody>';
                             while ($row = mysqli_fetch_array($result)) {
                                 echo '<tr>';
-                                echo '<td>' . $row['Student_id'] . '</td>';
-                                echo '<td>' . $row['Fname'] . '</td>';
-                                echo '<td>' . $row['Lname'] . '</td>';
-                                echo '<td>' . $row['email'] . '</td>';
-                                echo '<td>' . $row['tel'] . '</td>';
-                                echo '<td>' . $row['Pword'] . '</td>';
+                                echo '<td>' . $row['student_id'] . '</td>';
+                                echo '<td>' . $row['class_id1'] . '</td>';
+                                echo '<td>' . $row['class_id2'] . '</td>';
+                                echo '<td>' . $row['class_id3'] . '</td>';
+                                echo '<td>' . $row['class_id4'] . '</td>';
+                                
                                
 
-                                echo '<td>';
-
-                                echo '<a href="update.php?Student_id=' .
-                                    $row['Student_id'] .
-                                    '" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                echo '<a href="delete.php?Student_id=' .
-                                    $row['Student_id'] .
-                                    '" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                echo '</td>';
+                                
                                 echo '</tr>';
                             }
                             echo '</tbody>';
@@ -111,7 +93,7 @@
             </div>        
         </div>
     </div>
-    <form class=" pull-right" action="Admindashboard.php" method="post">
+    <form class=" pull-right" action="Studentdashboard.php" method="post">
     
     <button  class="btn btn-outline-success my-2 my-sm-0" type="submit" style= "padding: 12px;  background: #427285;
         border-top-left-radius: 5px;
@@ -122,8 +104,7 @@
             cursor: pointer;
             color: #fff;
             font-weight: 700;
-             font-size: 15px;" >Back to admin</button>
+             font-size: 15px;" >Back to dashboard</button>
  </form>
-    
 </body>
 </html>

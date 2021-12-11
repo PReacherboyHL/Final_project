@@ -15,7 +15,7 @@ if(isset($_POST['Login']))//Check when the login button is clicked
    
     //Store variables in session
     $_SESSION['Admin_id']= $id;
-    header("location:index.php"); // redirects to members view page
+    header("location:Admindashboard.php"); // redirects to members view page
     exit;  
 }
 else{
@@ -57,7 +57,7 @@ mysqli_close($link); // Close connection
             <!-- left side of the form-->
             <div class="form-left">
                 <h2 class="text-uppercase">Welcome Admin!!</h2>
-                <p><h5>Kindly enter your new classes name</h5></p>
+                <p><h5>Kindly Login</h5></p>
                 <br>
                 <br>
                 <br>
@@ -66,7 +66,7 @@ mysqli_close($link); // Close connection
                 <br>
                
                 <div class="form-field">
-                    <h1><a href="indexLogin.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
+                    <h1><a href="index.php" class="btn btn-primary btn-lg" id= " Homepagebtn"  role="button">Home page</a></h1>
                 </div>
             </div>
 
