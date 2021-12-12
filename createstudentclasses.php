@@ -50,7 +50,7 @@ if (mysqli_num_rows($check_login) > 0) {
     if ($results) {
         echo "<script LANGUAGE='JavaScript'>
         window.alert('You have successfully added a person);
-        window.location.href=addperson.html';
+        window.location.href=addperson.php';
         </script>";
     }
 }
